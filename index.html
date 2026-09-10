@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Three Wishes Gifts &mdash; Coming Soon</title>
+<meta name="description" content="Three Wishes Gifts is coming soon. Something magical is on its way." />
+<meta name="theme-color" content="#fbebd9" />
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<link rel="apple-touch-icon" href="assets/logo.jpg" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Three Wishes Gifts &mdash; Coming Soon" />
+<meta property="og:description" content="Something magical is on its way." />
+<meta property="og:image" content="assets/logo.jpg" />
+<meta property="og:url" content="https://threewishesgifts.com" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+  :root {
+    /* sampled directly from the logo artwork so it tiles seamlessly */
+    --cream: #fde8d4;
+    --cream-deep: #f7ddc4;
+    --coral: #dd6350;
+    --coral-soft: #e8896b;
+    --ink: #b9543f;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--coral);
+    font-family: "Georgia", "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 8vh 24px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    animation: rise 1s ease-out both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .divider {
+    width: 54px;
+    height: 2px;
+    background: var(--coral-soft);
+    border: 0;
+    margin: 28px auto 26px;
+    opacity: 0.7;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw + 1rem, 2.6rem);
+    font-weight: 400;
+    letter-spacing: 0.42em;
+    text-indent: 0.42em;
+    text-transform: uppercase;
+    color: var(--coral);
+  }
+
+  p.tagline {
+    margin: 18px auto 0;
+    max-width: 30ch;
+    font-size: clamp(0.98rem, 1.4vw + 0.6rem, 1.15rem);
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--coral-soft);
+  }
+
+  .domain {
+    margin-top: 40px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--coral-soft);
+    opacity: 0.85;
+  }
+
+  /* twinkling stars */
+  .sky { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .sky i {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--coral-soft);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation: twinkle 4.5s ease-in-out infinite;
+  }
+  .sky i:nth-child(1) { top: 16%; left: 12%; animation-delay: 0s;   transform: scale(0.8); }
+  .sky i:nth-child(2) { top: 26%; left: 82%; animation-delay: 0.8s; transform: scale(1.2); }
+  .sky i:nth-child(3) { top: 68%; left: 8%;  animation-delay: 1.6s; transform: scale(0.6); }
+  .sky i:nth-child(4) { top: 74%; left: 88%; animation-delay: 2.3s; transform: scale(1); }
+  .sky i:nth-child(5) { top: 44%; left: 4%;  animation-delay: 3.1s; transform: scale(0.7); }
+  .sky i:nth-child(6) { top: 12%; left: 60%; animation-delay: 1.2s; transform: scale(0.5); }
+  .sky i:nth-child(7) { top: 84%; left: 40%; animation-delay: 2.7s; transform: scale(0.9); }
+  .sky i:nth-child(8) { top: 58%; left: 92%; animation-delay: 0.4s; transform: scale(0.6); }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.6); }
+    50%      { opacity: 0.9; transform: scale(1.1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { animation: none; }
+    .sky i { animation: none; opacity: 0.35; }
+  }
+</style>
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <main class="card">
+    <img class="logo" src="assets/logo.jpg" alt="Three Wishes Gifts" />
+    <hr class="divider" />
+    <h1>Coming Soon</h1>
+    <p class="tagline">Something magical is on its way.</p>
+    <div class="domain">threewishesgifts.com</div>
+  </main>
+</body>
+</html>
