@@ -3,156 +3,189 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Three Wishes Gifts &mdash; Coming Soon</title>
-<meta name="description" content="Three Wishes Gifts is coming soon. Something magical is on its way." />
-<meta name="theme-color" content="#fbebd9" />
+<title>Three Wishes Gifts &mdash; Digital Musts for Busy Lives</title>
+<meta name="description" content="Clean, beautifully designed digital planners, journals and invitation suites from a mum-and-daughter team. Shop budget planners, meal planners, study planners and celebration suites." />
+<meta name="theme-color" content="#fde8d4" />
 <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 <link rel="apple-touch-icon" href="assets/logo.jpg" />
 
-<!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Three Wishes Gifts &mdash; Coming Soon" />
-<meta property="og:description" content="Something magical is on its way." />
+<meta property="og:title" content="Three Wishes Gifts &mdash; Digital Musts for Busy Lives" />
+<meta property="og:description" content="Clean, beautifully designed digital planners, journals and invitation suites for real life." />
 <meta property="og:image" content="assets/logo.jpg" />
 <meta property="og:url" content="https://threewishesgifts.com" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<style>
-  :root {
-    /* sampled directly from the logo artwork so it tiles seamlessly */
-    --cream: #fde8d4;
-    --cream-deep: #f7ddc4;
-    --coral: #dd6350;
-    --coral-soft: #e8896b;
-    --ink: #b9543f;
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-
-  body {
-    background: var(--cream);
-    color: var(--coral);
-    font-family: "Georgia", "Times New Roman", serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 8vh 24px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .card {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 560px;
-    text-align: center;
-    animation: rise 1s ease-out both;
-  }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .logo {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .divider {
-    width: 54px;
-    height: 2px;
-    background: var(--coral-soft);
-    border: 0;
-    margin: 28px auto 26px;
-    opacity: 0.7;
-  }
-
-  h1 {
-    margin: 0;
-    font-size: clamp(1.5rem, 4vw + 1rem, 2.6rem);
-    font-weight: 400;
-    letter-spacing: 0.42em;
-    text-indent: 0.42em;
-    text-transform: uppercase;
-    color: var(--coral);
-  }
-
-  p.tagline {
-    margin: 18px auto 0;
-    max-width: 30ch;
-    font-size: clamp(0.98rem, 1.4vw + 0.6rem, 1.15rem);
-    font-style: italic;
-    letter-spacing: 0.02em;
-    color: var(--coral-soft);
-  }
-
-  .domain {
-    margin-top: 40px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--coral-soft);
-    opacity: 0.85;
-  }
-
-  /* twinkling stars */
-  .sky { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-  .sky i {
-    position: absolute;
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: var(--coral-soft);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    opacity: 0;
-    animation: twinkle 4.5s ease-in-out infinite;
-  }
-  .sky i:nth-child(1) { top: 16%; left: 12%; animation-delay: 0s;   transform: scale(0.8); }
-  .sky i:nth-child(2) { top: 26%; left: 82%; animation-delay: 0.8s; transform: scale(1.2); }
-  .sky i:nth-child(3) { top: 68%; left: 8%;  animation-delay: 1.6s; transform: scale(0.6); }
-  .sky i:nth-child(4) { top: 74%; left: 88%; animation-delay: 2.3s; transform: scale(1); }
-  .sky i:nth-child(5) { top: 44%; left: 4%;  animation-delay: 3.1s; transform: scale(0.7); }
-  .sky i:nth-child(6) { top: 12%; left: 60%; animation-delay: 1.2s; transform: scale(0.5); }
-  .sky i:nth-child(7) { top: 84%; left: 40%; animation-delay: 2.7s; transform: scale(0.9); }
-  .sky i:nth-child(8) { top: 58%; left: 92%; animation-delay: 0.4s; transform: scale(0.6); }
-
-  @keyframes twinkle {
-    0%, 100% { opacity: 0; transform: scale(0.6); }
-    50%      { opacity: 0.9; transform: scale(1.1); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .card { animation: none; }
-    .sky i { animation: none; opacity: 0.35; }
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-  </div>
 
-  <main class="card">
-    <img class="logo" src="assets/logo.jpg" alt="Three Wishes Gifts" />
-    <hr class="divider" />
-    <h1>Coming Soon</h1>
-    <p class="tagline">Something magical is on its way.</p>
-    <div class="domain">threewishesgifts.com</div>
-  </main>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.jpg" alt="Three Wishes Gifts logo" />Three Wishes Gifts</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Our Story</a>
+      <a href="shop.html">Shop</a>
+      <a href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Etsy Shop ↗</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-outline btn-sm" href="shop.html">Shop Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="sky" data-stars="18" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <img class="logo-mark" src="assets/logo.jpg" alt="Three Wishes Gifts" />
+    <span class="eyebrow">A Mum &amp; Daughter Studio</span>
+    <h1>Digital musts for <em>busy lives</em>, and gifts for the moments that matter</h1>
+    <p class="lede">Clean, beautifully designed planners, journals and invitation suites &mdash; made by us, for women who want to feel a little more on top of things and a lot more magical.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="shop.html">Shop the Collection</a>
+      <a class="btn btn-outline" href="about.html">Our Story</a>
+    </div>
+    <div class="scroll-cue">Scroll to explore ✨</div>
+  </div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>✦ Budget Planners</span><span>✦ Meal Planners</span><span>✦ Celebrations &amp; Invites</span><span>✦ Study &amp; School Planners</span><span>✦ Journals</span><span>✦ Business Flyers</span>
+    <span>✦ Budget Planners</span><span>✦ Meal Planners</span><span>✦ Celebrations &amp; Invites</span><span>✦ Study &amp; School Planners</span><span>✦ Journals</span><span>✦ Business Flyers</span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Three Wishes</span>
+      <h2>Organisation that actually fits real life</h2>
+      <p>We spent years building systems for other people's businesses. These are the tools we built for ourselves &mdash; now yours too.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🗂️</div>
+        <h3>Get organised</h3>
+        <p>Budget planners, meal planners and study systems designed to remove stress, not add to it.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎉</div>
+        <h3>Celebrate life</h3>
+        <p>Editable invitation suites for showers, birthdays and parties &mdash; ready to send in minutes.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">✨</div>
+        <h3>Feel a little magic</h3>
+        <p>Every product is designed to be genuinely beautiful &mdash; on your iPad, in print, or in someone's inbox.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Fan Favourites</span>
+      <h2>Meal planning, made calm</h2>
+      <p>Our best-loved weekly meal planners &mdash; plan the week, shop by aisle, and skip the midweek panic.</p>
+    </div>
+    <div class="product-grid" id="featured-grid"></div>
+    <div class="center reveal" style="margin-top:48px;">
+      <a class="btn btn-primary" href="shop.html">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Shop by Category</span>
+      <h2>Something for every part of your week</h2>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-tile reveal" href="shop.html#Budget%20Planners"><span class="cat-emoji">💰</span><h3>Budget Planners</h3><span class="count">9 designs</span></a>
+      <a class="cat-tile reveal" href="shop.html#Meal%20Planners"><span class="cat-emoji">🍽️</span><h3>Meal Planners</h3><span class="count">4 designs</span></a>
+      <a class="cat-tile reveal" href="shop.html#Study%20%26%20School%20Planners"><span class="cat-emoji">📚</span><h3>Study &amp; School Planners</h3><span class="count">6 designs</span></a>
+      <a class="cat-tile reveal" href="shop.html#Journals"><span class="cat-emoji">📓</span><h3>Journals</h3><span class="count">2 designs</span></a>
+      <a class="cat-tile reveal" href="shop.html#Celebrations%20%26%20Invites"><span class="cat-emoji">🎊</span><h3>Celebrations &amp; Invites</h3><span class="count">3 designs</span></a>
+      <a class="cat-tile reveal" href="shop.html#Business%20%26%20Event%20Flyers"><span class="cat-emoji">🪧</span><h3>Business &amp; Event Flyers</h3><span class="count">2 designs</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream);">
+  <div class="container">
+    <div class="split reveal">
+      <div class="crop-frame" style="aspect-ratio: 896 / 1050;">
+        <img src="assets/about/about-hero-illustration.jpg" alt="Illustration of the Three Wishes Gifts team" />
+      </div>
+      <div class="split-copy">
+        <span class="eyebrow">Meet Kaz &amp; Meli</span>
+        <h2>A dream years in the making</h2>
+        <p>We're a mum-and-daughter team &mdash; mum Kaz (mum of three, hence the Three Wishes) and dog mum Meli. Between us, years of experience building brands and operations for other businesses.</p>
+        <p>At home, we were just as overwhelmed as everyone else &mdash; so we built the tools we actually needed, and started making gifts to celebrate the people we love.</p>
+        <a class="btn btn-outline" style="margin-top:22px;" href="about.html">Read Our Full Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="sky" data-stars="12" aria-hidden="true"></div>
+      <div style="position:relative;z-index:2;">
+        <h2>Ready to feel a little more on top of things?</h2>
+        <p>Every product is an instant digital download &mdash; ready to use the moment you buy, in Canva, GoodNotes, or Procreate.</p>
+        <a class="btn btn-primary" href="shop.html">Explore the Shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand"><img src="assets/logo.jpg" alt="Three Wishes Gifts logo" />Three Wishes Gifts</div>
+        <p class="footer-note">Digital organisation, celebrations and gifts for busy lives &mdash; designed by a mum-and-daughter team in London.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Etsy Shop ↗</a></li>
+          <li><a href="shop.html#Budget%20Planners">Budget Planners</a></li>
+          <li><a href="shop.html#Meal%20Planners">Meal Planners</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Three Wishes Gifts. All rights reserved.</span>
+      <span>Made with ✨ in London</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/products.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const featured = PRODUCTS.filter(p => p.category === "Meal Planners");
+  document.getElementById("featured-grid").innerHTML = featured.map(twProductCardHTML).join("");
+</script>
+<script src="assets/script.js"></script>
 </body>
 </html>

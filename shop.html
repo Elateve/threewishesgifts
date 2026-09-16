@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shop &mdash; Three Wishes Gifts</title>
+<meta name="description" content="Shop budget planners, meal planners, study planners, journals and celebration invitation suites from Three Wishes Gifts. Instant digital downloads via Etsy." />
+<meta name="theme-color" content="#fde8d4" />
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<link rel="apple-touch-icon" href="assets/logo.jpg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shop &mdash; Three Wishes Gifts" />
+<meta property="og:description" content="Digital planners, journals and invitation suites &mdash; instant download." />
+<meta property="og:image" content="assets/logo.jpg" />
+<meta property="og:url" content="https://threewishesgifts.com/shop.html" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.jpg" alt="Three Wishes Gifts logo" />Three Wishes Gifts</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">Our Story</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Etsy Shop ↗</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-outline btn-sm" href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Visit Etsy</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="sky" data-stars="14" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <span class="eyebrow">The Shop</span>
+    <h1>Digital musts for busy lives</h1>
+    <p>26 instant-download designs &mdash; planners, journals and invitation suites, ready to edit or print the moment you buy. Every purchase happens securely on Etsy.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="filter-bar reveal" id="filter-bar">
+      <button class="filter-chip active" data-cat="All">All (26)</button>
+      <button class="filter-chip" data-cat="Budget Planners">Budget Planners (9)</button>
+      <button class="filter-chip" data-cat="Meal Planners">Meal Planners (4)</button>
+      <button class="filter-chip" data-cat="Study & School Planners">Study &amp; School Planners (6)</button>
+      <button class="filter-chip" data-cat="Journals">Journals (2)</button>
+      <button class="filter-chip" data-cat="Celebrations & Invites">Celebrations &amp; Invites (3)</button>
+      <button class="filter-chip" data-cat="Business & Event Flyers">Business &amp; Event Flyers (2)</button>
+    </div>
+    <div class="product-grid" id="shop-grid"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="sky" data-stars="12" aria-hidden="true"></div>
+      <div style="position:relative;z-index:2;">
+        <h2>Can't find what you're after?</h2>
+        <p>Browse the full catalogue and our latest drops directly on Etsy.</p>
+        <a class="btn btn-primary" href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Visit Our Etsy Shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand"><img src="assets/logo.jpg" alt="Three Wishes Gifts logo" />Three Wishes Gifts</div>
+        <p class="footer-note">Digital organisation, celebrations and gifts for busy lives &mdash; designed by a mum-and-daughter team in London.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="https://www.etsy.com/shop/ThreeWishesGiftsShop" target="_blank" rel="noopener">Etsy Shop ↗</a></li>
+          <li><a href="shop.html#Budget%20Planners">Budget Planners</a></li>
+          <li><a href="shop.html#Meal%20Planners">Meal Planners</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Three Wishes Gifts. All rights reserved.</span>
+      <span>Made with ✨ in London</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/products.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const grid = document.getElementById("shop-grid");
+  const chips = document.querySelectorAll(".filter-chip");
+
+  function render(cat) {
+    const list = cat === "All" ? PRODUCTS : PRODUCTS.filter(p => p.category === cat);
+    grid.innerHTML = list.map(twProductCardHTML).join("");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      grid.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    } else {
+      grid.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+    }
+  }
+
+  function setActive(cat) {
+    chips.forEach(c => c.classList.toggle("active", c.dataset.cat === cat));
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      setActive(chip.dataset.cat);
+      render(chip.dataset.cat);
+      history.replaceState(null, "", chip.dataset.cat === "All" ? "shop.html" : "#" + encodeURIComponent(chip.dataset.cat));
+    });
+  });
+
+  const initialCat = decodeURIComponent((location.hash || "").replace("#", "")) || "All";
+  const validCat = [...chips].some(c => c.dataset.cat === initialCat) ? initialCat : "All";
+  setActive(validCat);
+  render(validCat);
+</script>
+<script src="assets/script.js"></script>
+</body>
+</html>
